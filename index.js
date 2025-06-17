@@ -13,7 +13,14 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 
 const app = express();
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://playground-frontend-taupe.vercel.app",
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    credentials: true,
+  })
+);
+app.options("*", cors());
 app.use(bodyParser.json());
 
 // --- MongoDB Connection ---

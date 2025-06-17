@@ -85,6 +85,8 @@ node index.js
 
 > The server will run on `http://localhost:5000`
 
+-----
+
 ---
 
 ## License
